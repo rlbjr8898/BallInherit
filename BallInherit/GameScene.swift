@@ -9,37 +9,26 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var myBall:Ball!
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
         
-        self.addChild(myLabel)
+        myBall = Ball(size: CGSizeMake(100,100),color: SKColor.purpleColor())
+        self.addChild(myBall)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
-        for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
-    }
+        // touch the screen and it starts bobbing up and down.
+        myBall.toggleBobbing()
+      }
+    
+    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+     }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+        // notice that the code is located in the Ball class so this is much more simple.
+        myBall.update()
+
     }
 }

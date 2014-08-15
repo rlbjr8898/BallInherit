@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D49F8391199E54A600107351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F8390199E54A600107351 /* AppDelegate.swift */; };
-		D49F8393199E54A600107351 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D49F8392199E54A600107351 /* GameScene.sks */; };
 		D49F8395199E54A600107351 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F8394199E54A600107351 /* GameScene.swift */; };
 		D49F8397199E54A600107351 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F8396199E54A600107351 /* GameViewController.swift */; };
-		D49F839A199E54A600107351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49F8398199E54A600107351 /* Main.storyboard */; };
 		D49F839C199E54A600107351 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49F839B199E54A600107351 /* Images.xcassets */; };
 		D49F83A8199E54A600107351 /* BallInheritTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F83A7199E54A600107351 /* BallInheritTests.swift */; };
+		D49F83B2199E550300107351 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F83B1199E550300107351 /* Ball.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +29,13 @@
 		D49F838B199E54A600107351 /* BallInherit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BallInherit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49F838F199E54A600107351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49F8390199E54A600107351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D49F8392199E54A600107351 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		D49F8394199E54A600107351 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D49F8396199E54A600107351 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		D49F8399199E54A600107351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D49F839B199E54A600107351 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D49F83A1199E54A600107351 /* BallInheritTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BallInheritTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49F83A6199E54A600107351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49F83A7199E54A600107351 /* BallInheritTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallInheritTests.swift; sourceTree = "<group>"; };
+		D49F83B1199E550300107351 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				D49F8390199E54A600107351 /* AppDelegate.swift */,
-				D49F8392199E54A600107351 /* GameScene.sks */,
 				D49F8394199E54A600107351 /* GameScene.swift */,
+				D49F83B1199E550300107351 /* Ball.swift */,
 				D49F8396199E54A600107351 /* GameViewController.swift */,
-				D49F8398199E54A600107351 /* Main.storyboard */,
 				D49F839B199E54A600107351 /* Images.xcassets */,
 				D49F838E199E54A600107351 /* Supporting Files */,
 			);
@@ -196,8 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49F839C199E54A600107351 /* Images.xcassets in Resources */,
-				D49F8393199E54A600107351 /* GameScene.sks in Resources */,
-				D49F839A199E54A600107351 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49F83B2199E550300107351 /* Ball.swift in Sources */,
 				D49F8395199E54A600107351 /* GameScene.swift in Sources */,
 				D49F8397199E54A600107351 /* GameViewController.swift in Sources */,
 				D49F8391199E54A600107351 /* AppDelegate.swift in Sources */,
@@ -238,17 +234,6 @@
 			targetProxy = D49F83A2199E54A600107351 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D49F8398199E54A600107351 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D49F8399199E54A600107351 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D49F83A9199E54A600107351 /* Debug */ = {
@@ -403,6 +388,7 @@
 				D49F83AD199E54A600107351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D49F83AE199E54A600107351 /* Build configuration list for PBXNativeTarget "BallInheritTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +397,7 @@
 				D49F83B0199E54A600107351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
 
         /* Pick a size for the scene */
         let scene = GameScene(fileNamed:"GameScene")
+        scene.anchorPoint = CGPointMake(0.5,0.5)
+        
         // Configure the view.
         let skView = self.view as SKView
         skView.showsFPS = true
